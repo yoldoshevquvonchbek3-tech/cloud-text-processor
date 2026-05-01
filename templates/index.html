@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>Text Processor</title>
+<style>
+  body { font-family: Arial; max-width: 600px; margin: 50px auto; padding: 20px; }
+  input, button { padding: 10px; margin: 5px; font-size: 16px; }
+  .result { background: #f0f0f0; padding: 15px; border-radius: 8px; margin-top: 20px; }
+</style>
+</head>
+<body>
+  <h1>☁️ Cloud Text Processor</h1>
+  <form method="POST">
+    <input type="text" name="text" placeholder="Enter text here..." required style="width:80%">
+    <button type="submit">Process</button>
+  </form>
+  {% if result %}
+  <div class="result">
+    <h3>Results:</h3>
+    <p><b>Original:</b> {{ result.original }}</p>
+    <p><b>Uppercase:</b> {{ result.uppercase }}</p>
+    <p><b>Word Count:</b> {{ result.word_count }}</p>
+    <p><b>Character Count:</b> {{ result.char_count }}</p>
+  </div>
+  {% endif %}
+</body>
+</html>
